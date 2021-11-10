@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICOM Images</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='file.css') }}">
+    <!-- <link rel="stylesheet" href="D:\2d3d\static\file.css"> -->
+    <!-- <link rel="stylesheet" href="file.css"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caladea:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h2><b>2D DICOM images to 3D Model</b></h2>
+    </header>
+
+    <div class="full-block">
+        
+        <div class="title-section">
+            <h2>What is DICOM?</h2>
+        </div>
+        <p class="description">DICOM (Digital Imaging and Communications in Medicine) is a standard protocol for the management and transmission of medical images and related data and is used in many healthcare facilities.DICOM was originally developed by the National Electrical Manufacturers Association (NEMA) and the American College of Radiology (ACR). </p>
+        <p class="description">It is a registered trademark of NEMA and is governed by the DICOM Standards Committee, a collaboration of users across all medical imaging specialties with an interest in the standardization of medical imaging information.</p>
+
+        <div class="how-to-row">
+            <div class="title-section">
+                <h2> How we make a 3D model out of it?</h2>
+            </div>
+            <div class="how-to-list">
+                    <div class="how-to-item">
+                        <div class="item-title">
+                            <h3 class="flexH3"><span class="number">1</span>  Take DICOM image data.</h3>
+                        </div>
+                        <div class="how-to-section-description">
+                            <p>We download the DICOM image data from you and store it in a folder.</p>
+                        </div>
+                    </div>
+                    <div class="how-to-item">
+                        <div class="item-title">
+                            <h3 class="flexH3"><span class="number">2</span>  Pre-process the images.</h3>
+                        </div>
+                        <div class="how-to-section-description">
+                            <p>We pre-process the downloaded images. Pre-processing includes analysis of the images.</p>
+                        </div>
+                    </div>
+                    <div class="how-to-item">
+                        <div class="item-title">
+                            <h3 class="flexH3"><span class="number">3</span>  Stack it on top of each other (Not physically).</h3>
+                        </div>
+                        <div class="how-to-section-description">
+                            <p>We then keep the images on top of each other through code and set a general threshold value.</p>
+                        </div>
+                    </div>
+                    <div class="how-to-item">
+                        <div class="item-title">
+                            <h3 class="flexH3"><span class="number">4</span>  Generate a model.</h3>
+                        </div>
+                        <div class="how-to-section-description">
+                            <p>Using functions, we make a model, which can be seen from different angles.</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <form action="http://127.0.0.1:5000/file" method="post" enctype="multipart/form-data">
+        <input type="file" name="file[]" id="ctrl" multiple="true" autocomplete="off" required />
+        <label for="ctrl" class="btn-1">Upload .dcm files</label>
+        <div id="ack"></div>
+        <button><b>Submit</b></button>
+    </form>
+
+    <script>
+        var input = document.getElementById( 'ctrl' );
+        var infoArea = document.getElementById( 'ack' );
+
+        input.addEventListener( 'change', showFileName );
+
+        function showFileName( event ) {
+        
+        // the change event gives us the input it occurred in 
+        var input = event.srcElement;
+        
+        // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
+        var fileName = input.files[0].name;
+        
+        // use fileName however fits your app best, i.e. add it into a div
+        // infoArea.textContent = 'File name: ' + fileName;
+
+        infoArea.textContent = 'Files uploaded successfully....'
+        }
+    </script>
+</body>
+</html>

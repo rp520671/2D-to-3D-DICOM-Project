@@ -1,0 +1,234 @@
+html, body, h3, p {
+    margin: 0;
+    padding: 0;
+    background-color: #fcde67;
+    font-family: 'Caladea', serif;
+  }
+  
+  header {
+    position: sticky;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #fdeeb3;
+    color: #030e12;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 8vh;
+  }
+  
+  header h2 {
+    margin: 0;
+  }
+
+
+  #content {
+    padding: 20px;
+  }
+
+
+  #content h3, p {
+    padding: 15px;
+  }
+
+  
+  .steps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  
+  form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  [type="file"] {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+  }
+  
+  [type="file"] + label {
+    background: #f15d22;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    /* font-family: 'Rubik', sans-serif; */
+    font-size: inherit;
+    font-weight: 500;
+    outline: none;
+    padding: 1rem 50px;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    vertical-align: middle;
+  }
+  
+  [type="file"] + label:hover {
+    background-color: #d3460d;
+  }
+  
+  [type="file"] + label.btn-1 {
+    background-color: #6785fc;
+    -webkit-box-shadow: 0 6px #141850;
+            box-shadow: 0 6px #141850;
+    -webkit-transition: none;
+    transition: none;
+    color: #000203;
+  }
+  
+  [type="file"] + label.btn-1:hover {
+    -webkit-box-shadow: 0 4px #141850;
+            box-shadow: 0 4px #141850;
+    top: 2px;
+  }
+  /*# sourceMappingURL=3.css.map */
+
+  .description {
+    display: block;
+    font: 400 16px/1.6;
+    color: #000203;
+    letter-spacing: 0px;
+  }
+  .full-block {
+    padding: 30px 20px 20px;
+  }
+  .title-section {
+    display: block;
+    text-align: center;
+}
+.how-to-row:first-child {
+  padding: 0 0 50px;
+}
+.how-to-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -15px;
+}
+.how-to-item {
+  display: block;
+  max-width: 530px;
+  width: 100%;
+  padding: 0 15px;
+  text-align: left;
+}
+.number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  min-width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  border: 2px solid;
+  font: 700 17px/1 "Poppins",sans-serif;
+  letter-spacing: 0.34px;
+  margin: 0px 16px 0 0;
+  border-color: #141850;
+}
+.number {
+  color: #141850;
+}
+.number {
+  border-color: #141850;
+}
+.how-to-section .how-to-item .item-title h3 {
+  display: flex;
+  font: 700 18px/1.25 "Poppins",sans-serif;
+  letter-spacing: 0.9px;
+  color: #000203;
+  align-items: center;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.flexH3 {
+  display: flex;
+  font: 700 18px/1.25 "Poppins",sans-serif;
+  letter-spacing: 0.9px;
+  color: #000203;
+  align-items: center;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.how-to-section .description {
+  display: block;
+}
+.how-to-section-description {
+  display: block;
+  font: 400 16px/1.6 "Poppins",sans-serif;
+  color: #000203;
+  letter-spacing: 0px;
+}
+
+
+#ack {
+  margin: 15px;
+}
+
+button {
+  position: relative;
+  background: #000;
+  border: 0;
+  padding: 14px 42px;
+  margin: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  /* font-weight: 400;
+  font-size: 12px; */
+  color: #fff;
+  letter-spacing: 0.2em;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -200%;
+  width: 200%;
+  height: 100%;
+  transform: skewX(-20deg);
+  background-image: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+}
+button:hover:after {
+  animation: shine 1.6s ease;
+}
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+@-webkit-keyframes shine {
+  100% {
+    left: 200%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 200%;
+  }
+}
